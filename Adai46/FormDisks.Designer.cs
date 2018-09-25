@@ -46,6 +46,7 @@
             // elipseButtonOpen
             // 
             this.elipseButtonOpen.ElipseRadius = 40;
+            this.elipseButtonOpen.TargetControl = this;
             // 
             // bunifuElipse1
             // 

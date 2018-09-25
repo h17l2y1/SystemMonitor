@@ -20,8 +20,9 @@ namespace Adai46
         public string Name { get => _name; set => _name = value; }
 
         private int baytToMBytes(String bayts){
-            long gpuBytes = Convert.ToInt64(bayts);
-            int a = Convert.ToInt32(gpuBytes / 1048576);
+            //long gpuBytes = Convert.ToInt64(bayts);
+            //int a = Convert.ToInt32(gpuBytes / 1048576);
+            int a = 2;
             return a;
         }
         

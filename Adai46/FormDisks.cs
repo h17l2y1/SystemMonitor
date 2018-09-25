@@ -48,14 +48,21 @@ namespace Adai46
                 circle.LineThickness = 1;
                 panel.Controls.Add(circle);
 
-                Label diskName = new Label();
-                diskName.Name = "diskName";
-                diskName.Text = drive.NameOfParts;
-                diskName.Font = new System.Drawing.Font("Century Gothic", 10);
-                diskName.Location = new System.Drawing.Point(94,24);
-                panel.Controls.Add(diskName);
+                //Label diskName = new Label();
+                //diskName.Name = "diskName";
+                //diskName.Text = drive.NameOfParts;
+                //diskName.Font = new System.Drawing.Font("Century Gothic", 10);
+                //diskName.Location = new System.Drawing.Point(94, 24);
+                //panel.Controls.Add(diskName);
+                //pnBot.Controls.Add(panel);
+
+                Label diskFileSystem = new Label();
+                diskFileSystem.Name = "diskFileSystem2";
+                diskFileSystem.Text = drive.FileSystem;
+                diskFileSystem.Font = new System.Drawing.Font("Century Gothic", 10);
+                diskFileSystem.Location = new System.Drawing.Point(160, 24);
+                panel.Controls.Add(diskFileSystem);
                 pnBot.Controls.Add(panel);
-                currentDisk++;
 
                 Label diskUsedTotal = new Label();
                 diskUsedTotal.Name = "diskUsedTotal";
@@ -84,6 +91,8 @@ namespace Adai46
 
                 panel.Controls.Add(lineProgressBar);
                 pnBot.Controls.Add(panel);
+
+                currentDisk++;
             }
 
             panelMenu();
@@ -129,14 +138,22 @@ namespace Adai46
 
         private int MemoryUsedPersent(long totalByte, long freeByte)
         {
-            int total = BaytToMByte(totalByte);
-            int free = BaytToMByte(freeByte);
-            int used = UsedMemoryMb(total, free);
+            if(totalByte == freeByte)
+            {
+                return 0;
+            }
+            else
+            {
+                int total = BaytToMByte(totalByte);
+                int free = BaytToMByte(freeByte);
+                int used = UsedMemoryMb(total, free);
 
-            int freePersent = free / (total / 100);
-            int usedPersent = 100 - freePersent;
+                int freePersent = free / (total / 100);
+                int usedPersent = 100 - freePersent;
 
-            return usedPersent;
+                return usedPersent;
+            }
+
         }
 
         private int UsedMemoryMb(int total, int free)

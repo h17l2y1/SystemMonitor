@@ -24,3 +24,17 @@ D:\Programming\C#\Adai46\Adai46\obj\Debug\Adai46.csproj.CoreCompileInputs.cache
 D:\Programming\C#\Adai46\Adai46\obj\Debug\Adai46.csproj.CopyComplete
 D:\Programming\C#\Adai46\Adai46\obj\Debug\Adai46.exe
 D:\Programming\C#\Adai46\Adai46\obj\Debug\Adai46.pdb
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.csprojAssemblyReference.cache
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.FormDisks.resources
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.FormMain.resources
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.FormDashboard.resources
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.Properties.Resources.resources
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.csproj.GenerateResource.cache
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.csproj.CoreCompileInputs.cache
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.pdb
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\bin\Debug\Adai46.exe.config
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\bin\Debug\Adai46.exe
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\bin\Debug\Adai46.pdb
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.csproj.CopyComplete
+C:\Users\vlad\Documents\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.exe

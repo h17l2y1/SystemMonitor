@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\NewLibr\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -53,24 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CpuInfo.cs" />
-    <Compile Include="DriversInfo.cs" />
-    <Compile Include="FormDisks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDisks.Designer.cs">
-      <DependentUpon>FormDisks.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDashboard.Designer.cs">
-      <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="GpuInfo.cs" />
     <Compile Include="OperatingSystem.cs" />
@@ -80,14 +68,20 @@
     <Compile Include="SeacherInfo.cs" />
     <Compile Include="SystemInfo.cs" />
     <Compile Include="NetwortInfo.cs" />
-    <EmbeddedResource Include="FormDisks.resx">
-      <DependentUpon>FormDisks.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UcDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcDashboard.Designer.cs">
+      <DependentUpon>UcDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcDisk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcDisk.Designer.cs">
+      <DependentUpon>UcDisk.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDashboard.resx">
-      <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +92,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UcDashboard.resx">
+      <DependentUpon>UcDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcDisk.resx">
+      <DependentUpon>UcDisk.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

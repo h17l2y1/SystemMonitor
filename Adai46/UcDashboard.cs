@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Adai46
 {
-    public partial class FormDashboard : Form
+    public partial class UcDashboard : UserControl
     {
-
-        int val,val2,val3,val4;
+        int val, val2, val3, val4;
 
         NetworkInfo network = new NetworkInfo();
         OperatingSystem os = new OperatingSystem();
@@ -18,9 +17,7 @@ namespace Adai46
 
         //CpuInfo cpu = new CpuInfo();
 
-        FormDisks formDisks = new FormDisks();
-
-        public FormDashboard()
+        public UcDashboard()
         {
             InitializeComponent();
             WriteInfo();
@@ -56,11 +53,11 @@ namespace Adai46
             CompInfo();
         }
 
-        // need activated CPU Name
+        // need activated CPU Name in release version
         private void CompInfo()
         {
             //lbCpuName.Text = cpu.Caption + "  "+ cpu.MaxClockSpeed;
-            lbGpuName.Text = gpu.Name+"   "+ Convert.ToInt32(gpu.Memory) / 1000 +" GB";
+            lbGpuName.Text = gpu.Name + "   " + Convert.ToInt32(gpu.Memory) / 1000 + " GB";
             lbmatherboardName.Text = system.MatherBoard;
             lbResolution.Text = Screen.PrimaryScreen.Bounds.Width.ToString() + "x" +
                                 Screen.PrimaryScreen.Bounds.Height.ToString();
@@ -87,6 +84,9 @@ namespace Adai46
         }
 
         // Attention VELOSIPED 18+ !!!!!!!!!
+
+
+
 
         private void timerForProgressBar_Tick(object sender, EventArgs e)
         {
@@ -128,7 +128,5 @@ namespace Adai46
                 timerForProgressBar4.Stop();
             }
         }
-
-
     }
 }

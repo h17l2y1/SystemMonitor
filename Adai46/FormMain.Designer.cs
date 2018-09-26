@@ -46,7 +46,11 @@
             this.lbMinimaize = new System.Windows.Forms.Label();
             this.lbPanelName = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.lbBy = new System.Windows.Forms.Label();
+            this.UcPanelDisk = new Adai46.UcDisk();
+            this.UcPanelDashboard = new Adai46.UcDashboard();
             this.pnSideBar.SuspendLayout();
+            this.pbBotInfo.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.SuspendLayout();
@@ -68,16 +72,17 @@
             this.pnSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(181, 540);
+            this.pnSideBar.Size = new System.Drawing.Size(175, 540);
             this.pnSideBar.TabIndex = 0;
             // 
             // pbBotInfo
             // 
             this.pbBotInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.pbBotInfo.Controls.Add(this.lbBy);
             this.pbBotInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbBotInfo.Location = new System.Drawing.Point(0, 440);
+            this.pbBotInfo.Location = new System.Drawing.Point(0, 471);
             this.pbBotInfo.Name = "pbBotInfo";
-            this.pbBotInfo.Size = new System.Drawing.Size(181, 100);
+            this.pbBotInfo.Size = new System.Drawing.Size(175, 69);
             this.pbBotInfo.TabIndex = 7;
             // 
             // btAbout2
@@ -86,7 +91,7 @@
             this.btAbout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btAbout2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btAbout2.BorderRadius = 0;
-            this.btAbout2.ButtonText = "          About";
+            this.btAbout2.ButtonText = "          Button 4";
             this.btAbout2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAbout2.DisabledColor = System.Drawing.Color.Gray;
             this.btAbout2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,15 +107,15 @@
             this.btAbout2.IconVisible = false;
             this.btAbout2.IconZoom = 90D;
             this.btAbout2.IsTab = false;
-            this.btAbout2.Location = new System.Drawing.Point(0, 203);
+            this.btAbout2.Location = new System.Drawing.Point(0, 196);
             this.btAbout2.Name = "btAbout2";
             this.btAbout2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btAbout2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btAbout2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btAbout2.selected = false;
-            this.btAbout2.Size = new System.Drawing.Size(181, 48);
+            this.btAbout2.Size = new System.Drawing.Size(175, 48);
             this.btAbout2.TabIndex = 6;
-            this.btAbout2.Text = "          About";
+            this.btAbout2.Text = "          Button 4";
             this.btAbout2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAbout2.Textcolor = System.Drawing.Color.White;
             this.btAbout2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,7 +126,7 @@
             this.btAbout1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btAbout1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btAbout1.BorderRadius = 0;
-            this.btAbout1.ButtonText = "          About";
+            this.btAbout1.ButtonText = "          Button 3";
             this.btAbout1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAbout1.DisabledColor = System.Drawing.Color.Gray;
             this.btAbout1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -137,24 +142,23 @@
             this.btAbout1.IconVisible = false;
             this.btAbout1.IconZoom = 90D;
             this.btAbout1.IsTab = false;
-            this.btAbout1.Location = new System.Drawing.Point(0, 155);
+            this.btAbout1.Location = new System.Drawing.Point(0, 148);
             this.btAbout1.Name = "btAbout1";
             this.btAbout1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btAbout1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btAbout1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btAbout1.selected = false;
-            this.btAbout1.Size = new System.Drawing.Size(181, 48);
+            this.btAbout1.Size = new System.Drawing.Size(175, 48);
             this.btAbout1.TabIndex = 5;
-            this.btAbout1.Text = "          About";
+            this.btAbout1.Text = "          Button 3";
             this.btAbout1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAbout1.Textcolor = System.Drawing.Color.White;
             this.btAbout1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btDisks
             // 
-            this.btDisks.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btDisks.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btDisks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btDisks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btDisks.BorderRadius = 0;
             this.btDisks.ButtonText = "          Disks";
             this.btDisks.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -172,13 +176,13 @@
             this.btDisks.IconVisible = false;
             this.btDisks.IconZoom = 90D;
             this.btDisks.IsTab = false;
-            this.btDisks.Location = new System.Drawing.Point(0, 107);
+            this.btDisks.Location = new System.Drawing.Point(0, 100);
             this.btDisks.Name = "btDisks";
             this.btDisks.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btDisks.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btDisks.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btDisks.selected = false;
-            this.btDisks.Size = new System.Drawing.Size(181, 48);
+            this.btDisks.Size = new System.Drawing.Size(175, 48);
             this.btDisks.TabIndex = 4;
             this.btDisks.Text = "          Disks";
             this.btDisks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +192,7 @@
             // 
             // btDashboard
             // 
-            this.btDashboard.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btDashboard.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btDashboard.BorderRadius = 0;
@@ -208,13 +212,13 @@
             this.btDashboard.IconVisible = false;
             this.btDashboard.IconZoom = 90D;
             this.btDashboard.IsTab = false;
-            this.btDashboard.Location = new System.Drawing.Point(0, 59);
+            this.btDashboard.Location = new System.Drawing.Point(0, 52);
             this.btDashboard.Name = "btDashboard";
             this.btDashboard.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btDashboard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btDashboard.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btDashboard.selected = false;
-            this.btDashboard.Size = new System.Drawing.Size(181, 48);
+            this.btDashboard.Size = new System.Drawing.Size(175, 48);
             this.btDashboard.TabIndex = 3;
             this.btDashboard.Text = "          Dashboard";
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +234,7 @@
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(181, 59);
+            this.pnLogo.Size = new System.Drawing.Size(175, 52);
             this.pnLogo.TabIndex = 2;
             // 
             // lbLogoVersion
@@ -238,7 +242,7 @@
             this.lbLogoVersion.AutoSize = true;
             this.lbLogoVersion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogoVersion.ForeColor = System.Drawing.Color.White;
-            this.lbLogoVersion.Location = new System.Drawing.Point(34, 31);
+            this.lbLogoVersion.Location = new System.Drawing.Point(34, 27);
             this.lbLogoVersion.Name = "lbLogoVersion";
             this.lbLogoVersion.Size = new System.Drawing.Size(105, 21);
             this.lbLogoVersion.TabIndex = 2;
@@ -249,7 +253,7 @@
             this.lbLogo.AutoSize = true;
             this.lbLogo.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogo.ForeColor = System.Drawing.Color.White;
-            this.lbLogo.Location = new System.Drawing.Point(39, 5);
+            this.lbLogo.Location = new System.Drawing.Point(39, 1);
             this.lbLogo.Name = "lbLogo";
             this.lbLogo.Size = new System.Drawing.Size(95, 30);
             this.lbLogo.TabIndex = 0;
@@ -263,9 +267,9 @@
             this.pnHeader.Controls.Add(this.lbMinimaize);
             this.pnHeader.Controls.Add(this.lbPanelName);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnHeader.Location = new System.Drawing.Point(181, 0);
+            this.pnHeader.Location = new System.Drawing.Point(175, 0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(711, 59);
+            this.pnHeader.Size = new System.Drawing.Size(717, 52);
             this.pnHeader.TabIndex = 0;
             // 
             // lbExit
@@ -313,7 +317,7 @@
             // 
             this.lbPanelName.AutoSize = true;
             this.lbPanelName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPanelName.Location = new System.Drawing.Point(87, 16);
+            this.lbPanelName.Location = new System.Drawing.Point(87, 12);
             this.lbPanelName.Name = "lbPanelName";
             this.lbPanelName.Size = new System.Drawing.Size(183, 24);
             this.lbPanelName.TabIndex = 1;
@@ -326,12 +330,43 @@
             this.bunifuDragControl1.TargetControl = this.pnHeader;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // lbBy
+            // 
+            this.lbBy.AutoSize = true;
+            this.lbBy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBy.ForeColor = System.Drawing.Color.LightGray;
+            this.lbBy.Location = new System.Drawing.Point(12, 43);
+            this.lbBy.Name = "lbBy";
+            this.lbBy.Size = new System.Drawing.Size(130, 17);
+            this.lbBy.TabIndex = 0;
+            this.lbBy.Text = "© Vlad Sharmanov";
+            // 
+            // UcPanelDisk
+            // 
+            this.UcPanelDisk.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UcPanelDisk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UcPanelDisk.Location = new System.Drawing.Point(175, 52);
+            this.UcPanelDisk.Name = "UcPanelDisk";
+            this.UcPanelDisk.Size = new System.Drawing.Size(717, 488);
+            this.UcPanelDisk.TabIndex = 3;
+            // 
+            // UcPanelDashboard
+            // 
+            this.UcPanelDashboard.BackColor = System.Drawing.Color.LightGray;
+            this.UcPanelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UcPanelDashboard.Location = new System.Drawing.Point(175, 52);
+            this.UcPanelDashboard.Name = "UcPanelDashboard";
+            this.UcPanelDashboard.Size = new System.Drawing.Size(717, 488);
+            this.UcPanelDashboard.TabIndex = 2;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(892, 540);
+            this.Controls.Add(this.UcPanelDisk);
+            this.Controls.Add(this.UcPanelDashboard);
             this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.pnSideBar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -340,8 +375,9 @@
             this.IsMdiContainer = true;
             this.Name = "FormMain";
             this.Text = "FormMain";
-            this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnSideBar.ResumeLayout(false);
+            this.pbBotInfo.ResumeLayout(false);
+            this.pbBotInfo.PerformLayout();
             this.pnLogo.ResumeLayout(false);
             this.pnLogo.PerformLayout();
             this.pnHeader.ResumeLayout(false);
@@ -368,5 +404,8 @@
         private System.Windows.Forms.Label lbExit;
         private System.Windows.Forms.Label lbMaximaze;
         private System.Windows.Forms.Label lbMinimaize;
+        private UcDashboard UcPanelDashboard;
+        private UcDisk UcPanelDisk;
+        private System.Windows.Forms.Label lbBy;
     }
 }

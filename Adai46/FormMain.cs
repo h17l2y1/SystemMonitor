@@ -12,32 +12,28 @@ namespace Adai46
 {
     public partial class FormMain : Form
     {
-        FormDashboard formDashboard = new FormDashboard();
-        FormDisks formDisks = new FormDisks();
 
         public FormMain()
         {
-            InitializeComponent(); 
-
+            InitializeComponent();
+            UcPanelDashboard.Show();
+            UcPanelDisk.Hide();
         }
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
             lbPanelName.Text = btDashboard.Text;
-            formDashboard.Dock = DockStyle.Fill;
-            formDashboard.MdiParent = this;
-            formDashboard.Show();
-            formDisks.Hide();
+
+            UcPanelDashboard.Show();
+            UcPanelDisk.Hide();
         } 
 
         private void btDisk_Click(object sender, EventArgs e)
         {
             lbPanelName.Text = btDisks.Text;
-            formDashboard.Hide();
 
-            formDisks.Dock = DockStyle.Fill;
-            formDisks.MdiParent = this;
-            formDisks.Show();
+            UcPanelDisk.Show();
+            UcPanelDashboard.Hide();
         }
 
         private void lbExit_Click(object sender, EventArgs e)
@@ -49,13 +45,5 @@ namespace Adai46
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            formDashboard.Dock = DockStyle.Fill;
-            formDashboard.MdiParent = this;
-            formDashboard.Show();
-        }
-
     }
 }

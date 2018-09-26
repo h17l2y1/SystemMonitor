@@ -1,35 +1,35 @@
 ﻿using System;
-using System.IO;
+using System.Windows.Forms;
 using System.Collections;
 using Bunifu.Framework.UI;
 
-using System.Windows.Forms;
-
 namespace Adai46
 {
-    public partial class FormDisks : Form
+    public partial class UcDisk : UserControl
     {
         RomInfo rom = new RomInfo();
 
-        public FormDisks()
+        public UcDisk()
         {
             InitializeComponent();
             SeacherInfo searcher = new SeacherInfo();
             DiskInfo(searcher.getrDrives());
         }
 
+
         private void DiskInfo(ArrayList drives)
         {
             int currentDisk = 0;
 
 
-            foreach (RomInfo drive in drives){
+            foreach (RomInfo drive in drives)
+            {
                 Panel panel = new Panel();
                 panel.Name = "panel" + drive.NameOfParts;
                 panel.Parent = pnBot;
                 panel.Size = new System.Drawing.Size(711, 61);
                 panel.Dock = DockStyle.Top;
-                panel.BackColor = currentDisk % 2 == 0 ? System.Drawing.Color.Gainsboro: System.Drawing.Color.White;
+                panel.BackColor = currentDisk % 2 == 0 ? System.Drawing.Color.Gainsboro : System.Drawing.Color.White;
 
                 BunifuCircleProgressbar circle = new BunifuCircleProgressbar();
                 circle.ForeColor = System.Drawing.Color.FromArgb(229, 126, 49);
@@ -48,39 +48,35 @@ namespace Adai46
                 circle.LineThickness = 1;
                 panel.Controls.Add(circle);
 
-                //Label diskName = new Label();
-                //diskName.Name = "diskName";
-                //diskName.Text = drive.NameOfParts;
-                //diskName.Font = new System.Drawing.Font("Century Gothic", 10);
-                //diskName.Location = new System.Drawing.Point(94, 24);
-                //panel.Controls.Add(diskName);
-                //pnBot.Controls.Add(panel);
+                Label diskName = new Label();
+                diskName.Text = drive.NameOfParts;
+                diskName.AutoSize = false;
+                diskName.Size = new System.Drawing.Size(30, 17);
+                diskName.Font = new System.Drawing.Font("Century Gothic", 10);
+                diskName.Location = new System.Drawing.Point(94, 24);
+                panel.Controls.Add(diskName);
 
                 Label diskFileSystem = new Label();
-                diskFileSystem.Name = "diskFileSystem2";
                 diskFileSystem.Text = drive.FileSystem;
+                diskFileSystem.AutoSize = false;
+                diskFileSystem.Size = new System.Drawing.Size(50, 17);
                 diskFileSystem.Font = new System.Drawing.Font("Century Gothic", 10);
                 diskFileSystem.Location = new System.Drawing.Point(160, 24);
                 panel.Controls.Add(diskFileSystem);
-                pnBot.Controls.Add(panel);
 
                 Label diskUsedTotal = new Label();
-                diskUsedTotal.Name = "diskUsedTotal";
                 diskUsedTotal.Font = new System.Drawing.Font("Century Gothic", 10);
-                diskUsedTotal.Text = Convert.ToString(BaytToGByte(drive.TotalSize) - 
-                    BaytToGByte(drive.FreeSpace)) + "/" + 
+                diskUsedTotal.Text = Convert.ToString(BaytToGByte(drive.TotalSize) -
+                    BaytToGByte(drive.FreeSpace)) + "/" +
                     Convert.ToString(BaytToGByte(drive.TotalSize)) + " GB";
                 diskUsedTotal.Location = new System.Drawing.Point(290, 24);
                 panel.Controls.Add(diskUsedTotal);
-                pnBot.Controls.Add(panel);
 
                 Label diskPersents = new Label();
-                diskPersents.Name = "diskPersents";
                 diskPersents.Font = new System.Drawing.Font("Century Gothic", 10);
                 diskPersents.Text = Convert.ToString(MemoryUsedPersent(drive.TotalSize, drive.FreeSpace)) + " %";
                 diskPersents.Location = new System.Drawing.Point(450, 24);
                 panel.Controls.Add(diskPersents);
-                pnBot.Controls.Add(panel);
 
                 BunifuProgressBar lineProgressBar = new BunifuProgressBar();
                 lineProgressBar.Value = MemoryUsedPersent(drive.TotalSize, drive.FreeSpace);
@@ -108,7 +104,6 @@ namespace Adai46
             panelMenu.Dock = DockStyle.Top;
 
             BunifuFlatButton buttonExplorer = new BunifuFlatButton();
-            buttonExplorer.Name = "btOpenExplorer";
             buttonExplorer.Text = "Open";
             buttonExplorer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             buttonExplorer.Location = new System.Drawing.Point(20, 12);
@@ -127,7 +122,6 @@ namespace Adai46
             elipse.TargetControl = buttonExplorer;
 
             Label totalUserdMem = new Label();
-            totalUserdMem.Name = "diskPersents";
             totalUserdMem.Text = "Used/Total";
             totalUserdMem.Location = new System.Drawing.Point(284, 24);
             totalUserdMem.Font = new System.Drawing.Font("Century Gothic", 10);
@@ -138,7 +132,7 @@ namespace Adai46
 
         private int MemoryUsedPersent(long totalByte, long freeByte)
         {
-            if(totalByte == freeByte)
+            if (totalByte == freeByte)
             {
                 return 0;
             }
@@ -160,7 +154,7 @@ namespace Adai46
         {
             return total - free;
         }
-        
+
         private int BaytToGByte(long bayt)
         {
             long longGBayt = bayt / 1048576000;
@@ -171,16 +165,6 @@ namespace Adai46
         {
             long longGBayt = bayt / 1048576;
             return Convert.ToInt32(longGBayt);
-        }
-
-        private void btOpenExplorer_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("explorer.exe");
-        }
-        
-        private void bunifuFlatButton_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("explorer.exe");
         }
     }
 }

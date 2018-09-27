@@ -6,8 +6,8 @@ namespace Adai46
 {
     public partial class UcDashboard : UserControl
     {
-        int val, val2, val3, val4;
-
+        int val, val2 = 0;
+        bool test = false;
         NetworkInfo network = new NetworkInfo();
         OperatingSystem os = new OperatingSystem();
         SystemInfo system = new SystemInfo();
@@ -21,7 +21,6 @@ namespace Adai46
         {
             InitializeComponent();
             WriteInfo();
-            StartTimers();
         }
 
         private int UsedRomPersent(ArrayList drives)
@@ -37,18 +36,10 @@ namespace Adai46
 
         }
 
-        private void StartTimers()
-        {
-            timerForProgressBar.Start();
-            timerForProgressBar2.Start();
-            timerForProgressBar3.Start();
-            timerForProgressBar4.Start();
-        }
-
         private void WriteInfo()
         {
             UserInfo();
-            WriteRamInfo();
+            RamInfo();
             Nerwork();
             CompInfo();
         }
@@ -63,7 +54,7 @@ namespace Adai46
                                 Screen.PrimaryScreen.Bounds.Height.ToString();
         }
 
-        private void WriteRamInfo()
+        private void RamInfo()
         {
             lbPersentUsedRam.Text = "RAM: " + Convert.ToString(os.UsedRamMemoryPersont) + " %";
             lbRamUsed.Text = Convert.ToString(os.UseRamMemory) + "/" + Convert.ToString(os.TotalVisibleMemorySize) + " MB";
@@ -83,50 +74,27 @@ namespace Adai46
             lbOsVersion.Text = os.Caption;
         }
 
-        // Attention VELOSIPED 18+ !!!!!!!!!
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            float fcpu = pcCpu.NextValue();
+            float fram = pcRam.NextValue();
 
+            progressBarCircleCpu.Value = (int)fcpu;
+            progressBarCircleRam.Value = (int)fram;
 
+        }
 
-
-        private void timerForProgressBar_Tick(object sender, EventArgs e)
+        private void timerForStaticPersent_Tick(object sender, EventArgs e)
         {
             val += 1;
-            progressBarCircleRam.Value = val;
-            if (progressBarCircleRam.Value == os.UsedRamMemoryPersont)
+            progressBarCircleRom.Value = val;
+            progressBarCircleGpu.Value = 20;
+            if (progressBarCircleRom.Value == UsedRomPersent(searcher.getDrives()))
             {
-                timerForProgressBar.Stop();
+                timerForStaticPersent.Stop();
             }
         }
 
-        // chenge VALUE from 6 to Convert.ToInt32(cpu.LoadPercentage)
-        private void timerForProgressBar2_Tick(object sender, EventArgs e)
-        {
-            val2 += 1;
-            progressBarCircleCpu.Value = val2;
-            if (progressBarCircleCpu.Value == /*Convert.ToInt32(cpu.LoadPercentage)*/ 6)
-            {
-                timerForProgressBar2.Stop();
-            }
-        }
 
-        private void timerForProgressBar3_Tick(object sender, EventArgs e)
-        {
-            val3 += 1;
-            progressBarCircleRom.Value = val3;
-            if (progressBarCircleRom.Value == UsedRomPersent(searcher.getrDrives()))
-            {
-                timerForProgressBar3.Stop();
-            }
-        }
-
-        private void timerForProgressBar4_Tick(object sender, EventArgs e)
-        {
-            val4 += 1;
-            progressBarCircleGpu.Value = val4;
-            if (progressBarCircleGpu.Value == 22)
-            {
-                timerForProgressBar4.Stop();
-            }
-        }
     }
 }

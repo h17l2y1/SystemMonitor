@@ -5,7 +5,6 @@ namespace Adai46
 {
     class RomInfo : SeacherInfo {
 
-        //private const String from = "Win32_LogicalDisk";
         private String _nameOfParts;
         private String _fileSystem;
         private long _FreeSpace;

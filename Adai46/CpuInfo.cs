@@ -26,7 +26,5 @@ namespace Adai46 {
         public string CurrentClockSpeed { get => _CurrentClockSpeed; set => _CurrentClockSpeed = value; }
         public string MaxClockSpeed { get => _MaxClockSpeed; set => _MaxClockSpeed = value; }
 
-
-
     }
 }

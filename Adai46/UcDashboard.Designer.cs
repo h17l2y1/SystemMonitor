@@ -69,18 +69,20 @@
             this.lbUserNameStatic = new System.Windows.Forms.Label();
             this.elipsePanelRam = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipsePanelNetwork = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.timerForProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.timerForProgressBar2 = new System.Windows.Forms.Timer(this.components);
-            this.timerForProgressBar3 = new System.Windows.Forms.Timer(this.components);
             this.elipsePanelCompInfo = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipsePanelUser = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.timerForProgressBar4 = new System.Windows.Forms.Timer(this.components);
+            this.pcCpu = new System.Diagnostics.PerformanceCounter();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pcRam = new System.Diagnostics.PerformanceCounter();
+            this.timerForStaticPersent = new System.Windows.Forms.Timer(this.components);
             this.pnCompInfo.SuspendLayout();
             this.pnNetwork.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnRam.SuspendLayout();
             this.pnUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcCpu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcRam)).BeginInit();
             this.SuspendLayout();
             // 
             // lbGpu
@@ -391,8 +393,8 @@
             // progressBarCircleCpu
             // 
             this.progressBarCircleCpu.animated = false;
-            this.progressBarCircleCpu.animationIterval = 5;
-            this.progressBarCircleCpu.animationSpeed = 300;
+            this.progressBarCircleCpu.animationIterval = 1;
+            this.progressBarCircleCpu.animationSpeed = 1;
             this.progressBarCircleCpu.BackColor = System.Drawing.Color.LightGray;
             this.progressBarCircleCpu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("progressBarCircleCpu.BackgroundImage")));
             this.progressBarCircleCpu.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -543,24 +545,6 @@
             this.elipsePanelNetwork.ElipseRadius = 40;
             this.elipsePanelNetwork.TargetControl = this.pnNetwork;
             // 
-            // timerForProgressBar
-            // 
-            this.timerForProgressBar.Enabled = true;
-            this.timerForProgressBar.Interval = 50;
-            this.timerForProgressBar.Tick += new System.EventHandler(this.timerForProgressBar_Tick);
-            // 
-            // timerForProgressBar2
-            // 
-            this.timerForProgressBar2.Enabled = true;
-            this.timerForProgressBar2.Interval = 50;
-            this.timerForProgressBar2.Tick += new System.EventHandler(this.timerForProgressBar2_Tick);
-            // 
-            // timerForProgressBar3
-            // 
-            this.timerForProgressBar3.Enabled = true;
-            this.timerForProgressBar3.Interval = 50;
-            this.timerForProgressBar3.Tick += new System.EventHandler(this.timerForProgressBar3_Tick);
-            // 
             // elipsePanelCompInfo
             // 
             this.elipsePanelCompInfo.ElipseRadius = 40;
@@ -571,11 +555,28 @@
             this.elipsePanelUser.ElipseRadius = 40;
             this.elipsePanelUser.TargetControl = this.pnUser;
             // 
-            // timerForProgressBar4
+            // pcCpu
             // 
-            this.timerForProgressBar4.Enabled = true;
-            this.timerForProgressBar4.Interval = 50;
-            this.timerForProgressBar4.Tick += new System.EventHandler(this.timerForProgressBar4_Tick);
+            this.pcCpu.CategoryName = "Processor";
+            this.pcCpu.CounterName = "% Processor Time";
+            this.pcCpu.InstanceName = "_Total";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 300;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // pcRam
+            // 
+            this.pcRam.CategoryName = "Memory";
+            this.pcRam.CounterName = "% Committed Bytes In Use";
+            // 
+            // timerForStaticPersent
+            // 
+            this.timerForStaticPersent.Enabled = true;
+            this.timerForStaticPersent.Interval = 50;
+            this.timerForStaticPersent.Tick += new System.EventHandler(this.timerForStaticPersent_Tick);
             // 
             // UcDashboard
             // 
@@ -596,7 +597,7 @@
             this.Controls.Add(this.progressBarCircleRam);
             this.Controls.Add(this.pnUser);
             this.Name = "UcDashboard";
-            this.Size = new System.Drawing.Size(711, 460);
+            this.Size = new System.Drawing.Size(711, 493);
             this.pnCompInfo.ResumeLayout(false);
             this.pnCompInfo.PerformLayout();
             this.pnNetwork.ResumeLayout(false);
@@ -607,6 +608,8 @@
             this.pnUser.ResumeLayout(false);
             this.pnUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcCpu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcRam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,11 +656,11 @@
         private System.Windows.Forms.Label lbUserNameStatic;
         private Bunifu.Framework.UI.BunifuElipse elipsePanelRam;
         private Bunifu.Framework.UI.BunifuElipse elipsePanelNetwork;
-        private System.Windows.Forms.Timer timerForProgressBar;
-        private System.Windows.Forms.Timer timerForProgressBar2;
-        private System.Windows.Forms.Timer timerForProgressBar3;
         private Bunifu.Framework.UI.BunifuElipse elipsePanelCompInfo;
         private Bunifu.Framework.UI.BunifuElipse elipsePanelUser;
-        private System.Windows.Forms.Timer timerForProgressBar4;
+        private System.Diagnostics.PerformanceCounter pcCpu;
+        private System.Windows.Forms.Timer timer;
+        private System.Diagnostics.PerformanceCounter pcRam;
+        private System.Windows.Forms.Timer timerForStaticPersent;
     }
 }

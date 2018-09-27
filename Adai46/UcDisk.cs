@@ -13,7 +13,7 @@ namespace Adai46
         {
             InitializeComponent();
             SeacherInfo searcher = new SeacherInfo();
-            DiskInfo(searcher.getrDrives());
+            DiskInfo(searcher.getDrives());
         }
 
 

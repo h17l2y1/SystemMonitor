@@ -20,7 +20,7 @@ namespace Adai46
             return searchEngine(from, what);
         }
 
-        public ArrayList getrDrives(){
+        public ArrayList getDrives(){
             ManagementClass obj = new ManagementClass("Win32_LogicalDisk");
             ManagementObjectCollection mcol = obj.GetInstances();
 
@@ -38,5 +38,6 @@ namespace Adai46
             }
             return list;
         }
+
     }
 }

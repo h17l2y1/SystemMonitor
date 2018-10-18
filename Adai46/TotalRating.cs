@@ -8,6 +8,8 @@ namespace Adai46
         private string _cpuRating;
         private string _gpuRating;
         private string _ramRating;
+        private readonly string _cpuName;
+        private readonly string _gpuName;
 
         private const string NON = "NON";
         private const string VERYLOW = "verylow";
@@ -19,10 +21,15 @@ namespace Adai46
         public string GpuRating { get => _gpuRating; private set => _gpuRating = value; }
         public string RamRating { get => _ramRating; private set => _ramRating = value; }
 
+        //CpuInfo cpu = new CpuInfo();
+        GpuInfo gpu = new GpuInfo();
+
         public TotalRating()
         {
-            _cpuRating = CpuEvaluation();
+            _cpuName = "AMD FX(tm)-8300 Eight-Core Processor";
+            _gpuName = gpu.Name;
             _gpuRating = GpuEvaluation();
+            _cpuRating = CpuEvaluation();
             _ramRating = RamEvaluation();
         }
 
@@ -40,13 +47,15 @@ namespace Adai46
 
         private string GpuEvaluation()
         {
-            var gpuRating = new GpuRating();
-            long gpuPerfomance = gpuRating.GetGpuRating();
-            if (gpuPerfomance < 20000)
-                return VERYLOW;
-            else if (gpuPerfomance > 20001 && gpuPerfomance < 100000)
+            var Rating = new Rating("GPULibr.txt", _gpuName);
+            long Perfomance = Convert.ToInt64(Rating.GetRating());
+            if (Perfomance == 0)
+                return NON;
+            else if (Perfomance < 20000)
                 return LOW;
-            else if (gpuPerfomance > 100001 && gpuPerfomance < 1000000)
+            else if (Perfomance > 20001 && Perfomance < 100000)
+                return VERYLOW;
+            else if (Perfomance > 100001 && Perfomance < 1000000)
                 return MID;
             else
                 return TOP;
@@ -54,18 +63,17 @@ namespace Adai46
 
         private string CpuEvaluation()
         {
-            var cpuRating = new CpuRating();
-            double cpuPerfomance = cpuRating.GetCpuRating();
-            if (cpuPerfomance < 14.500)
+            var Rating = new Rating("CPULibr.txt", _cpuName);
+            double Perfomance = Rating.GetRating();
+            if (Perfomance == 0)
+                return NON;
+            else if (Perfomance < 14.500)
                 return LOW;
-            else if (cpuPerfomance > 14.501 && cpuPerfomance < 30.000)
+            else if (Perfomance > 14.501 && Perfomance < 30.000)
                 return MID;
             else
                 return TOP;
         }
-
-
-
         
     }
 }

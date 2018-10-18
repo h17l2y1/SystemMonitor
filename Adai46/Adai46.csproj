@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CpuInfo.cs" />
-    <Compile Include="CpuRating.cs" />
+    <Compile Include="Rating.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,7 +62,6 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="GpuInfo.cs" />
-    <Compile Include="GpuRating.cs" />
     <Compile Include="OperatingSystem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

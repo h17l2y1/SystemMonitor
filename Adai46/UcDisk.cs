@@ -17,10 +17,10 @@ namespace Adai46
         }
 
 
+
         private void DiskInfo(ArrayList drives)
         {
             int currentDisk = 0;
-
 
             foreach (RomInfo drive in drives)
             {

@@ -25,6 +25,7 @@ namespace Adai46
             lbPanelName.Text = btDashboard.Text;
 
             UcPanelDashboard.Show();
+            UcPanelPcRaring.Hide();
             UcPanelDisk.Hide();
         } 
 
@@ -33,6 +34,7 @@ namespace Adai46
             lbPanelName.Text = btDisks.Text;
 
             UcPanelDisk.Show();
+            UcPanelPcRaring.Hide();
             UcPanelDashboard.Hide();
         }
 
@@ -44,6 +46,15 @@ namespace Adai46
         private void lbMinimaize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btPcRating_Click(object sender, EventArgs e)
+        {
+            lbPanelName.Text = btDashboard.Text;
+
+            UcPanelPcRaring.Show();
+            UcPanelDashboard.Hide();
+            UcPanelDisk.Hide();
         }
     }
 }

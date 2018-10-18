@@ -6,8 +6,7 @@ namespace Adai46
 {
     public partial class UcDashboard : UserControl
     {
-        int val, val2 = 0;
-        bool test = false;
+        int val = 0;
         NetworkInfo network = new NetworkInfo();
         OperatingSystem os = new OperatingSystem();
         SystemInfo system = new SystemInfo();

@@ -33,6 +33,7 @@
             this.elipseFormMain = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnSideBar = new System.Windows.Forms.Panel();
             this.pbBotInfo = new System.Windows.Forms.Panel();
+            this.lbBy = new System.Windows.Forms.Label();
             this.btAbout2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btAbout1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btDisks = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,9 +47,9 @@
             this.lbMinimaize = new System.Windows.Forms.Label();
             this.lbPanelName = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lbBy = new System.Windows.Forms.Label();
             this.UcPanelDisk = new Adai46.UcDisk();
             this.UcPanelDashboard = new Adai46.UcDashboard();
+            this.UcPanelPcRaring = new Adai46.UcPcRaring();
             this.pnSideBar.SuspendLayout();
             this.pbBotInfo.SuspendLayout();
             this.pnLogo.SuspendLayout();
@@ -84,6 +85,17 @@
             this.pbBotInfo.Name = "pbBotInfo";
             this.pbBotInfo.Size = new System.Drawing.Size(175, 69);
             this.pbBotInfo.TabIndex = 7;
+            // 
+            // lbBy
+            // 
+            this.lbBy.AutoSize = true;
+            this.lbBy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBy.ForeColor = System.Drawing.Color.LightGray;
+            this.lbBy.Location = new System.Drawing.Point(12, 43);
+            this.lbBy.Name = "lbBy";
+            this.lbBy.Size = new System.Drawing.Size(130, 17);
+            this.lbBy.TabIndex = 0;
+            this.lbBy.Text = "© Vlad Sharmanov";
             // 
             // btAbout2
             // 
@@ -126,7 +138,7 @@
             this.btAbout1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btAbout1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btAbout1.BorderRadius = 0;
-            this.btAbout1.ButtonText = "          Button 3";
+            this.btAbout1.ButtonText = "          PC Rating";
             this.btAbout1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAbout1.DisabledColor = System.Drawing.Color.Gray;
             this.btAbout1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -150,15 +162,17 @@
             this.btAbout1.selected = false;
             this.btAbout1.Size = new System.Drawing.Size(175, 48);
             this.btAbout1.TabIndex = 5;
-            this.btAbout1.Text = "          Button 3";
+            this.btAbout1.Text = "          PC Rating";
             this.btAbout1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAbout1.Textcolor = System.Drawing.Color.White;
             this.btAbout1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAbout1.Click += new System.EventHandler(this.btPcRating_Click);
             // 
             // btDisks
             // 
             this.btDisks.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btDisks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btDisks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btDisks.BorderRadius = 0;
             this.btDisks.ButtonText = "          Disks";
             this.btDisks.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -330,17 +344,6 @@
             this.bunifuDragControl1.TargetControl = this.pnHeader;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // lbBy
-            // 
-            this.lbBy.AutoSize = true;
-            this.lbBy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBy.ForeColor = System.Drawing.Color.LightGray;
-            this.lbBy.Location = new System.Drawing.Point(12, 43);
-            this.lbBy.Name = "lbBy";
-            this.lbBy.Size = new System.Drawing.Size(130, 17);
-            this.lbBy.TabIndex = 0;
-            this.lbBy.Text = "© Vlad Sharmanov";
-            // 
             // UcPanelDisk
             // 
             this.UcPanelDisk.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -359,12 +362,22 @@
             this.UcPanelDashboard.Size = new System.Drawing.Size(717, 488);
             this.UcPanelDashboard.TabIndex = 2;
             // 
+            // UcPanelPcRaring
+            // 
+            this.UcPanelPcRaring.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.UcPanelPcRaring.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UcPanelPcRaring.Location = new System.Drawing.Point(175, 52);
+            this.UcPanelPcRaring.Name = "UcPanelPcRaring";
+            this.UcPanelPcRaring.Size = new System.Drawing.Size(717, 488);
+            this.UcPanelPcRaring.TabIndex = 5;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(892, 540);
+            this.Controls.Add(this.UcPanelPcRaring);
             this.Controls.Add(this.UcPanelDisk);
             this.Controls.Add(this.UcPanelDashboard);
             this.Controls.Add(this.pnHeader);
@@ -407,5 +420,6 @@
         private UcDashboard UcPanelDashboard;
         private UcDisk UcPanelDisk;
         private System.Windows.Forms.Label lbBy;
+        private UcPcRaring UcPanelPcRaring;
     }
 }

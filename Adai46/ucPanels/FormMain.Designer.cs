@@ -73,7 +73,7 @@
             this.pnSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(175, 540);
+            this.pnSideBar.Size = new System.Drawing.Size(161, 540);
             this.pnSideBar.TabIndex = 0;
             // 
             // pbBotInfo
@@ -83,7 +83,7 @@
             this.pbBotInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pbBotInfo.Location = new System.Drawing.Point(0, 471);
             this.pbBotInfo.Name = "pbBotInfo";
-            this.pbBotInfo.Size = new System.Drawing.Size(175, 69);
+            this.pbBotInfo.Size = new System.Drawing.Size(161, 69);
             this.pbBotInfo.TabIndex = 7;
             // 
             // lbBy
@@ -125,7 +125,7 @@
             this.btAbout2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btAbout2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btAbout2.selected = false;
-            this.btAbout2.Size = new System.Drawing.Size(175, 48);
+            this.btAbout2.Size = new System.Drawing.Size(161, 48);
             this.btAbout2.TabIndex = 6;
             this.btAbout2.Text = "          Button 4";
             this.btAbout2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +160,7 @@
             this.btAbout1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btAbout1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btAbout1.selected = false;
-            this.btAbout1.Size = new System.Drawing.Size(175, 48);
+            this.btAbout1.Size = new System.Drawing.Size(161, 48);
             this.btAbout1.TabIndex = 5;
             this.btAbout1.Text = "          PC Rating";
             this.btAbout1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,7 +196,7 @@
             this.btDisks.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btDisks.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btDisks.selected = false;
-            this.btDisks.Size = new System.Drawing.Size(175, 48);
+            this.btDisks.Size = new System.Drawing.Size(161, 48);
             this.btDisks.TabIndex = 4;
             this.btDisks.Text = "          Disks";
             this.btDisks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,7 +232,7 @@
             this.btDashboard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.btDashboard.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btDashboard.selected = false;
-            this.btDashboard.Size = new System.Drawing.Size(175, 48);
+            this.btDashboard.Size = new System.Drawing.Size(161, 48);
             this.btDashboard.TabIndex = 3;
             this.btDashboard.Text = "          Dashboard";
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -248,7 +248,7 @@
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(175, 52);
+            this.pnLogo.Size = new System.Drawing.Size(161, 52);
             this.pnLogo.TabIndex = 2;
             // 
             // lbLogoVersion
@@ -281,9 +281,9 @@
             this.pnHeader.Controls.Add(this.lbMinimaize);
             this.pnHeader.Controls.Add(this.lbPanelName);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnHeader.Location = new System.Drawing.Point(175, 0);
+            this.pnHeader.Location = new System.Drawing.Point(161, 0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(717, 52);
+            this.pnHeader.Size = new System.Drawing.Size(731, 52);
             this.pnHeader.TabIndex = 0;
             // 
             // lbExit
@@ -348,27 +348,27 @@
             // 
             this.UcPanelDisk.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.UcPanelDisk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UcPanelDisk.Location = new System.Drawing.Point(175, 52);
+            this.UcPanelDisk.Location = new System.Drawing.Point(161, 52);
             this.UcPanelDisk.Name = "UcPanelDisk";
-            this.UcPanelDisk.Size = new System.Drawing.Size(717, 488);
+            this.UcPanelDisk.Size = new System.Drawing.Size(731, 488);
             this.UcPanelDisk.TabIndex = 3;
             // 
             // UcPanelDashboard
             // 
             this.UcPanelDashboard.BackColor = System.Drawing.Color.LightGray;
             this.UcPanelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UcPanelDashboard.Location = new System.Drawing.Point(175, 52);
+            this.UcPanelDashboard.Location = new System.Drawing.Point(161, 52);
             this.UcPanelDashboard.Name = "UcPanelDashboard";
-            this.UcPanelDashboard.Size = new System.Drawing.Size(717, 488);
+            this.UcPanelDashboard.Size = new System.Drawing.Size(731, 488);
             this.UcPanelDashboard.TabIndex = 2;
             // 
             // UcPanelPcRaring
             // 
             this.UcPanelPcRaring.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.UcPanelPcRaring.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UcPanelPcRaring.Location = new System.Drawing.Point(175, 52);
+            this.UcPanelPcRaring.Location = new System.Drawing.Point(161, 52);
             this.UcPanelPcRaring.Name = "UcPanelPcRaring";
-            this.UcPanelPcRaring.Size = new System.Drawing.Size(717, 488);
+            this.UcPanelPcRaring.Size = new System.Drawing.Size(731, 488);
             this.UcPanelPcRaring.TabIndex = 5;
             // 
             // FormMain

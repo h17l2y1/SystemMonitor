@@ -8,6 +8,8 @@ namespace Adai46
 {
     class OperatingSystem : SeacherInfo
     {
+        SizeConverter converter = new SizeConverter();
+
         private const String from = "Win32_OperatingSystem";
 
         private String _os;
@@ -27,14 +29,14 @@ namespace Adai46
         public OperatingSystem()
         {
             _os = seacher(from, "Caption");
-            _FreePhysicalMemory = baytToMbayts(seacher(from, "FreePhysicalMemory"));
-            _FreeSpaceInPagingFiles = baytToMbayts(seacher(from, "FreeSpaceInPagingFiles"));
-            _FreeVirtualMemory = baytToMbayts(seacher(from, "FreeVirtualMemory"));
+            _FreePhysicalMemory = converter.byteToMBytes(seacher(from, "FreePhysicalMemory"));
+            _FreeSpaceInPagingFiles = converter.byteToMBytes(seacher(from, "FreeSpaceInPagingFiles"));
+            _FreeVirtualMemory = converter.byteToMBytes(seacher(from, "FreeVirtualMemory"));
             _Manufacturer = seacher(from, "Manufacturer");
             _OSArchitecture = seacher(from, "OSArchitecture");
             _RegisteredUser = seacher(from, "RegisteredUser");
-            _TotalVirtualMemorySize = baytToMbayts(seacher(from, "TotalVirtualMemorySize"));
-            _TotalRamMemory = baytToMbayts(seacher(from, "TotalVisibleMemorySize"));
+            _TotalVirtualMemorySize = converter.byteToMBytes(seacher(from, "TotalVirtualMemorySize"));
+            _TotalRamMemory = converter.byteToMBytes(seacher(from, "TotalVisibleMemorySize"));
             _Version = seacher(from, "Version");
             _freeRamMemoryPersont = freeMemoryInPersont();
             _usedRamMemoryPersont = usedRamMemoryInPersont();
@@ -55,9 +57,6 @@ namespace Adai46
         public int UseRamMemory { get => _useRamMemory; set => _useRamMemory = value; }
         public int freeMemoryPersont { get => _usedRamMemoryPersont; set => _usedRamMemoryPersont = value; }
         
-        private int baytToMbayts(String bayts){
-            return Convert.ToInt32(bayts) / 1024;
-        }
 
         private int freeMemoryInPersont(){
             return (TotalVisibleMemorySize - FreePhysicalMemory) / (TotalVisibleMemorySize / 100);

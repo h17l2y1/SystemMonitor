@@ -5,13 +5,14 @@ using System.Collections;
 namespace Adai46
 {
     class SeacherInfo {
-
+        
+        // Движок вытягивания данных из железа
         private String searchEngine(String from, String what) {
             ManagementClass obj = new ManagementClass(from);
             ManagementObjectCollection mcol = obj.GetInstances();
             string result = "";
             foreach (ManagementObject strt in mcol) {
-                result += Convert.ToString(strt[what]);
+                result += Convert.ToString(strt[what]).Trim();
             }
             return result;
         }
@@ -20,6 +21,8 @@ namespace Adai46
             return searchEngine(from, what);
         }
 
+        // Велосипед...
+        // Даже не хочу комментировать
         public ArrayList getDrives(){
             ManagementClass obj = new ManagementClass("Win32_LogicalDisk");
             ManagementObjectCollection mcol = obj.GetInstances();

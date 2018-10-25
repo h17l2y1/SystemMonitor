@@ -52,3 +52,7 @@ D:\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.pdb
 D:\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.UcDashboard.resources
 D:\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.UcDisk.resources
 D:\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.UcPcRaring.resources
+D:\Programming\C#\SystemMonitor\Adai46\obj\Debug\Adai46.csprojAssemblyReference.cache
+D:\Programming\C#\SystemMonitor\Adai46\bin\Debug\NLog.config
+D:\Programming\C#\SystemMonitor\Adai46\bin\Debug\NLog.dll
+D:\Programming\C#\SystemMonitor\Adai46\bin\Debug\NLog.xml

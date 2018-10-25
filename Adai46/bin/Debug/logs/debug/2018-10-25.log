@@ -1,0 +1,385 @@
+2018-10-25 | Adai46.FormMain..ctor | TRACE | ----Start program---- 
+
+2018-10-25 | Adai46.GpuInfo..ctor | DEBUG | Scaning GPU 
+
+2018-10-25 | Adai46.GpuInfo..ctor | DEBUG | Scaning GPU 
+
+2018-10-25 | Adai46.TotalRating..ctor | DEBUG | Creating rating 
+
+2018-10-25 | Adai46.TotalRating.GpuEvaluation | DEBUG | Add all GPU to databse 
+
+2018-10-25 | Adai46.Rating.ToHashtable | DEBUG | Add date to hashtable 
+
+2018-10-25 | Adai46.TotalRating.GpuEvaluation | DEBUG | GPU rating searched NVIDIA GeForce GTX 1050 Ti 
+
+2018-10-25 | Adai46.TotalRating.CpuEvaluation | DEBUG | Add all CPU to databse 
+
+2018-10-25 | Adai46.Rating.ToHashtable | DEBUG | Add date to hashtable 
+
+2018-10-25 | Adai46.TotalRating.CpuEvaluation | DEBUG | CPU rating searched AMD FX(tm)-8300 Eight-Core Processor 
+
+2018-10-25 | Adai46.TotalRating.RamEvaluation | DEBUG | Scanning RAM 
+
+2018-10-25 | Adai46.TotalRating..ctor | DEBUG | Total rating is created 
+
+2018-10-25 | Adai46.FormMain.lbExit_Click | TRACE | ----- Exit ----- 
+
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | WARN | CPU rating no searched
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | Click dashboard
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | WARN | CPU rating no searched
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8300 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | WARN | CPU rating no searched
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8350 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8350 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | Click dashboard
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8350 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | Click dashboard
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8350 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8350 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | Click dashboard
+2018-10-25 | TRACE | ----- Exit -----
+2018-10-25 | TRACE | ----Start program----
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Creating rating
+2018-10-25 | DEBUG | Add all GPU to databse
+2018-10-25 | DEBUG | Scaning GPU
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | GPU rating searched: NVIDIA GeForce GTX 1050 Ti
+2018-10-25 | DEBUG | Add all CPU to databse
+2018-10-25 | DEBUG | Scaning CPU
+2018-10-25 | DEBUG | Add date to hashtable
+2018-10-25 | DEBUG | CPU rating searched: AMD FX(tm)-8350 Eight-Core Processor
+2018-10-25 | DEBUG | Scanning RAM
+2018-10-25 | DEBUG | Total rating is created
+2018-10-25 | TRACE | Click Pc Rating 
+2018-10-25 | TRACE | Click  Disk
+2018-10-25 | TRACE | ----- Exit -----

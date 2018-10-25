@@ -12,11 +12,9 @@ namespace Adai46
         public UcDisk()
         {
             InitializeComponent();
-            SeacherInfo searcher = new SeacherInfo();
-            DiskInfo(searcher.getDrives());
+            //new DinamicDiskCreater().createDisk();
+            DiskInfo(new SeacherInfo().getDrives());
         }
-
-
 
         private void DiskInfo(ArrayList drives)
         {
@@ -24,6 +22,8 @@ namespace Adai46
 
             foreach (RomInfo drive in drives)
             {
+                var converter = new SizeConverter();
+
                 Panel panel = new Panel();
                 panel.Name = "panel" + drive.NameOfParts;
                 panel.Parent = pnBot;
@@ -66,9 +66,10 @@ namespace Adai46
 
                 Label diskUsedTotal = new Label();
                 diskUsedTotal.Font = new System.Drawing.Font("Century Gothic", 10);
-                diskUsedTotal.Text = Convert.ToString(BaytToGByte(drive.TotalSize) -
-                    BaytToGByte(drive.FreeSpace)) + "/" +
-                    Convert.ToString(BaytToGByte(drive.TotalSize)) + " GB";
+                diskUsedTotal.Text = 
+                    Convert.ToString(converter.byteToGByte(drive.TotalSize) - 
+                    converter.byteToGByte(drive.FreeSpace)) + "/"
+                    + Convert.ToString(converter.byteToGByte(drive.TotalSize)) + " GB";
                 diskUsedTotal.Location = new System.Drawing.Point(290, 24);
                 panel.Controls.Add(diskUsedTotal);
 
@@ -130,23 +131,20 @@ namespace Adai46
 
         }
 
+
+        // Нужно разбить/убрать из этого класса
+
         private int MemoryUsedPersent(long totalByte, long freeByte)
         {
-            if (totalByte == freeByte)
-            {
-                return 0;
-            }
-            else
-            {
-                int total = BaytToMByte(totalByte);
-                int free = BaytToMByte(freeByte);
-                int used = UsedMemoryMb(total, free);
+            var converter = new SizeConverter();
 
-                int freePersent = free / (total / 100);
-                int usedPersent = 100 - freePersent;
+            int total = converter.byteToMByte(totalByte);
+            int free = converter.byteToMByte(freeByte);
+            int used = UsedMemoryMb(total, free);
 
-                return usedPersent;
-            }
+            int usedPersent = 100 - (free / (total / 100));
+
+            return usedPersent;
 
         }
 
@@ -155,16 +153,5 @@ namespace Adai46
             return total - free;
         }
 
-        private int BaytToGByte(long bayt)
-        {
-            long longGBayt = bayt / 1048576000;
-            return Convert.ToInt32(longGBayt);
-        }
-
-        public int BaytToMByte(long bayt)
-        {
-            long longGBayt = bayt / 1048576;
-            return Convert.ToInt32(longGBayt);
-        }
     }
 }

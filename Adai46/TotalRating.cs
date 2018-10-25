@@ -1,15 +1,11 @@
-﻿
+﻿using NLog;
 using System;
 
 namespace Adai46
 {
     class TotalRating
     {
-        private string _cpuRating;
-        private string _gpuRating;
-        private string _ramRating;
-        private readonly string _cpuName;
-        private readonly string _gpuName;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         private const string NON = "NON";
         private const string VERYLOW = "verylow";
@@ -17,26 +13,84 @@ namespace Adai46
         private const string MID = "middle";
         private const string TOP = "top";
 
-        public string CpuRating { get => _cpuRating; private set => _cpuRating = value; }
-        public string GpuRating { get => _gpuRating; private set => _gpuRating = value; }
-        public string RamRating { get => _ramRating; private set => _ramRating = value; }
 
-        //CpuInfo cpu = new CpuInfo();
-        GpuInfo gpu = new GpuInfo();
+        public string GpuRating { get => GpuEvaluation(); } 
+        public string CpuRating { get => CpuEvaluation(); }
+        public string RamRating { get => RamEvaluation(); }
 
-        public TotalRating()
+
+        // 3 метода по получению оценки компа 
+
+        private string GpuEvaluation()
         {
-            _cpuName = "AMD FX(tm)-8300 Eight-Core Processor";
-            _gpuName = gpu.Name;
-            _gpuRating = GpuEvaluation();
-            _cpuRating = CpuEvaluation();
-            _ramRating = RamEvaluation();
+            logger.Debug("Add all GPU to databse");
+            string gpuName = new GpuInfo().Name;
+
+            var Rating = new Rating("GPULibr.txt", gpuName);
+            long Perfomance = Convert.ToInt64(Rating.GetRating());
+
+            if (Perfomance == 0)
+            {
+                logger.Warn("GPU rating not searched");
+                return NON;
+            }
+            else if (Perfomance < 20000)
+            {
+                logger.Debug("GPU rating searched: " + gpuName);
+                return LOW;
+            }
+            else if (Perfomance > 20001 && Perfomance < 100000) {
+                logger.Debug("GPU rating searched: " + gpuName);
+                return VERYLOW;
+                }
+            else if (Perfomance > 100001 && Perfomance < 1000000)
+            {
+                logger.Debug("GPU rating searched: " + gpuName);
+                return MID;
+            }
+            else
+            {
+                logger.Debug("GPU rating searched: " + gpuName);
+                return TOP;
+            }
+        }
+
+        private string CpuEvaluation()
+        {
+            logger.Debug("Add all CPU to databse");
+            string cpuName = new CpuInfo().Name;
+
+            var Rating = new Rating("CPULibr.txt", cpuName);
+            double Perfomance = Rating.GetRating();
+
+            if (Perfomance == 0)
+            {
+                logger.Warn("CPU rating no searched");
+                return NON;
+            }
+            else if (Perfomance < 14.500)
+            {
+                logger.Debug("CPU rating searched: "+ cpuName);
+                return LOW;
+            }
+            else if (Perfomance > 14.501 && Perfomance < 30.000)
+            {
+                logger.Debug("CPU rating searched: " + cpuName);
+                return MID;
+            }
+            else
+            {
+                logger.Debug("CPU rating searched: " + cpuName);
+                return TOP;
+            }
+
         }
 
         private string RamEvaluation()
         {
-            var os = new OperatingSystem();
-            var totalRam = os.TotalVisibleMemorySize;
+            logger.Debug("Scanning RAM");
+            var totalRam = new OperatingSystem().TotalVisibleMemorySize;
+
             if (totalRam < 3900)
                 return LOW;
             else if (totalRam > 3901 && totalRam < 4200)
@@ -45,35 +99,5 @@ namespace Adai46
                 return TOP;
         }
 
-        private string GpuEvaluation()
-        {
-            var Rating = new Rating("GPULibr.txt", _gpuName);
-            long Perfomance = Convert.ToInt64(Rating.GetRating());
-            if (Perfomance == 0)
-                return NON;
-            else if (Perfomance < 20000)
-                return LOW;
-            else if (Perfomance > 20001 && Perfomance < 100000)
-                return VERYLOW;
-            else if (Perfomance > 100001 && Perfomance < 1000000)
-                return MID;
-            else
-                return TOP;
-        }
-
-        private string CpuEvaluation()
-        {
-            var Rating = new Rating("CPULibr.txt", _cpuName);
-            double Perfomance = Rating.GetRating();
-            if (Perfomance == 0)
-                return NON;
-            else if (Perfomance < 14.500)
-                return LOW;
-            else if (Perfomance > 14.501 && Perfomance < 30.000)
-                return MID;
-            else
-                return TOP;
-        }
-        
     }
 }

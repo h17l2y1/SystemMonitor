@@ -10,11 +10,7 @@ namespace Adai46
         NetworkInfo network = new NetworkInfo();
         OperatingSystem os = new OperatingSystem();
         SystemInfo system = new SystemInfo();
-        GpuInfo gpu = new GpuInfo();
         RomInfo rom = new RomInfo();
-        SeacherInfo searcher = new SeacherInfo();
-
-        //CpuInfo cpu = new CpuInfo();
 
         public UcDashboard()
         {
@@ -43,11 +39,10 @@ namespace Adai46
             CompInfo();
         }
 
-        // need activated CPU Name in release version
         private void CompInfo()
         {
-            //lbCpuName.Text = cpu.Caption + "  "+ cpu.MaxClockSpeed;
-            lbGpuName.Text = gpu.Name + "   " + Convert.ToInt32(gpu.Memory) / 1000 + " GB";
+            lbCpuName.Text = new CpuInfo().Name;
+            lbGpuName.Text = new GpuInfo().Name;
             lbmatherboardName.Text = system.MatherBoard;
             lbResolution.Text = Screen.PrimaryScreen.Bounds.Width.ToString() + "x" +
                                 Screen.PrimaryScreen.Bounds.Height.ToString();
@@ -56,7 +51,8 @@ namespace Adai46
         private void RamInfo()
         {
             lbPersentUsedRam.Text = "RAM: " + Convert.ToString(os.UsedRamMemoryPersont) + " %";
-            lbRamUsed.Text = Convert.ToString(os.UseRamMemory) + "/" + Convert.ToString(os.TotalVisibleMemorySize) + " MB";
+            lbRamUsed.Text = Convert.ToString(os.UseRamMemory) + "/"
+                + Convert.ToString(os.TotalVisibleMemorySize) + " MB";
             progressBarLineRam.Value = os.UsedRamMemoryPersont;
         }
 
@@ -80,7 +76,6 @@ namespace Adai46
 
             progressBarCircleCpu.Value = (int)fcpu;
             progressBarCircleRam.Value = (int)fram;
-
         }
 
         private void timerForStaticPersent_Tick(object sender, EventArgs e)
@@ -88,7 +83,7 @@ namespace Adai46
             val += 1;
             progressBarCircleRom.Value = val;
             progressBarCircleGpu.Value = 20;
-            if (progressBarCircleRom.Value == UsedRomPersent(searcher.getDrives()))
+            if (progressBarCircleRom.Value == UsedRomPersent(new SeacherInfo().getDrives()))
             {
                 timerForStaticPersent.Stop();
             }

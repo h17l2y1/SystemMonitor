@@ -38,9 +38,17 @@
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\NewLibr\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.10\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,42 +61,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CpuInfo.cs" />
+    <Compile Include="DinamicDiskCreater.cs" />
+    <Compile Include="Info\CpuInfo.cs" />
+    <Compile Include="PersentConverter.cs" />
     <Compile Include="Rating.cs" />
-    <Compile Include="FormMain.cs">
+    <Compile Include="SizeConverter.cs" />
+    <Compile Include="ucPanels\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="ucPanels\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GpuInfo.cs" />
-    <Compile Include="OperatingSystem.cs" />
+    <Compile Include="Info\GpuInfo.cs" />
+    <Compile Include="Info\OperatingSystem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RomInfo.cs" />
+    <Compile Include="Info\RomInfo.cs" />
     <Compile Include="SeacherInfo.cs" />
-    <Compile Include="SystemInfo.cs" />
-    <Compile Include="NetwortInfo.cs" />
+    <Compile Include="Info\SystemInfo.cs" />
+    <Compile Include="Info\NetwortInfo.cs" />
     <Compile Include="TotalRating.cs" />
-    <Compile Include="UcDashboard.cs">
+    <Compile Include="ucPanels\UcDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcDashboard.Designer.cs">
+    <Compile Include="ucPanels\UcDashboard.Designer.cs">
       <DependentUpon>UcDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcDisk.cs">
+    <Compile Include="ucPanels\UcDisk.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcDisk.Designer.cs">
+    <Compile Include="ucPanels\UcDisk.Designer.cs">
       <DependentUpon>UcDisk.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcPcRaring.cs">
+    <Compile Include="ucPanels\UcPcRaring.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcPcRaring.Designer.cs">
+    <Compile Include="ucPanels\UcPcRaring.Designer.cs">
       <DependentUpon>UcPcRaring.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="ucPanels\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,15 +111,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UcDashboard.resx">
+    <EmbeddedResource Include="ucPanels\UcDashboard.resx">
       <DependentUpon>UcDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcDisk.resx">
+    <EmbeddedResource Include="ucPanels\UcDisk.resx">
       <DependentUpon>UcDisk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcPcRaring.resx">
+    <EmbeddedResource Include="ucPanels\UcPcRaring.resx">
       <DependentUpon>UcPcRaring.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

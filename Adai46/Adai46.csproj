@@ -99,6 +99,8 @@
     <Compile Include="ucPanels\UcPcRaring.Designer.cs">
       <DependentUpon>UcPcRaring.cs</DependentUpon>
     </Compile>
+    <Compile Include="xml\Parameters.cs" />
+    <Compile Include="xml\Xmlxxx.cs" />
     <EmbeddedResource Include="ucPanels\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,5 +142,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

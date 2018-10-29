@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections;
+using Adai46.xml;
 
 namespace Adai46
 {
@@ -16,6 +17,7 @@ namespace Adai46
         {
             InitializeComponent();
             WriteInfo();
+            xml1();
         }
 
         private int UsedRomPersent(ArrayList drives)
@@ -89,6 +91,19 @@ namespace Adai46
             }
         }
 
+
+        //
+        // ----------------------
+
+        Xmlxxx xml = new Xmlxxx();
+        public void xml1()
+        {
+            xml.xCreate();
+            xml.xWrite(system.UserName, os.Caption, new CpuInfo().Name, new GpuInfo().Name, lbResolution.Text, os.TotalVisibleMemorySize, system.MatherBoard);
+        }
+
+        // ----------------------
+        //
 
     }
 }

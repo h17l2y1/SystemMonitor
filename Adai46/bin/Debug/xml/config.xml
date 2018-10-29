@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfParameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Parameters>
+    <UserName>vlad</UserName>
+    <Os>Майкрософт Windows 10 для образовательных учреждений</Os>
+    <Cpu>AMD FX(tm)-8350 Eight-Core Processor</Cpu>
+    <Gpu>NVIDIA GeForce GTX 1050 Ti</Gpu>
+    <Ram>8149</Ram>
+    <Resolution>1680x1050</Resolution>
+    <Matherboard>Gigabyte Technology Co., Ltd.</Matherboard>
+  </Parameters>
+</ArrayOfParameters>
